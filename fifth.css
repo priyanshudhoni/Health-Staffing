@@ -1,0 +1,20 @@
+body 
+{
+    background:linear-gradient(135deg,orange,pink);
+    font-family:'Fredoka One', cursive;
+}
+table{
+    background:linear-gradient(120deg,red,white);
+    height:50px;
+}
+h1{
+    background:linear-gradient(135deg,black,pink); 
+   
+}
+table .r
+{
+    height:400px;
+}
+
+
+

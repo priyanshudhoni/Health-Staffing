@@ -1,0 +1,106 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Fredoka One', cursive;
+}
+body{
+
+    height:100vh;
+    display:flex;
+    padding:20px;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,orange,pink);
+}
+.one
+{
+ background-color:silver;
+ max-width:1000px;
+  width:100%;
+    
+  background:#fff;
+  padding:25px 30px;
+  border-radius:6px;
+
+}
+.two
+{
+    font-size:25px;
+    font-weight:500;
+    position:relative;
+
+}
+.one .two::before
+{
+    content:"";
+    position:absolute;
+    height:3px;
+    width:30px;
+    background:gold;
+}
+.one form .ud
+{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    margin:20px 0 12 px 0;
+}
+form .ud .ib
+{
+   margin-bottom:15px;
+    width:calc(100% / 2 - 20px);
+}
+.ud .ib input{
+    height:45px;
+    width:100%;
+    outline:none;
+    border-bottom-width:2px;
+    border-radius:5px;
+    border:1 px solid black;
+    padding-left:15px;
+    font-size:16px;
+    transition: all 0.3s ease;
+
+}
+.ud .ib .d{
+    display:block;
+    font-weight:500;
+    margin-bottom:5px;
+}
+.ud .ib input:focus,
+.ud .ib input:valid 
+{
+    border-color:black;
+}
+form .button input 
+{
+    height:50px;
+    width:350px;
+    outline:none;
+    color:white;
+    background:linear-gradient(135deg,black,pink);
+    border:none;
+    font-size:18px;
+    font-weight:400;
+    letter-spacing:1px;
+
+
+
+}
+form .button input:hover{
+    background: linear-gradient(135deg, red,silver);
+}
+@media (max-width:600px)
+{
+    .container{
+        max-width:100%;
+    }
+    form .ud .ib{
+        margin-bottom:15px;
+        width:100%;
+    }
+}
+
+

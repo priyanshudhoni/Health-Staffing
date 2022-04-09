@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+    <head>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <title>
+        Jianmario Registration form.
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="fourth.css">
+      
+    
+       </head>
+        <body>
+            <h1 align="center">Registration Form </h1>
+            <form onsubmit="return validate();" action="greeting1.html">
+           <table align="center" cellpadding="10">
+               <tr>
+                   <td> First Name:</td>
+                   <td><input type="text" id="name" placeholder="Enter Your First Name"> </td>
+                   <td><label id="num" style="color:red; visibility:hidden";>** First Name Field Cannot be Empty</label></td>
+               </tr>
+               <tr>
+                <td> Last Name:</td>
+                <td><input type="text" id="name1" placeholder="Enter Your Last Name"> </td>
+                <td><label id="num1" style="color:red; visibility:hidden";>** Last Name Field Cannot be Empty</label></td>
+            </tr>
+            <tr>
+                <td> Email</td>
+                <td><input type="text" id="name2" placeholder="Enter Your EMail-ID"> </td>
+                <td><label id="num2" style="color:red; visibility:hidden";>** E-Mail Field Cannot be Empty</label></td>
+            </tr>
+            <tr>
+                <td> Date Of Birth</td>
+                <td><input type="date" id="date" placeholder="Enter Your Date Of Birth"> </td>
+            </tr>
+            <tr>
+                <td>Mobile Number:</td>
+                <td><input type="number" id="name3" placeholder=" Mobile Number"> </td>
+               <td><label id="num3" style="color:red; visibility:hidden;">** Mobile Number Field Cannot be Empty</label></td> 
+            </tr>
+            <tr>
+                <td> Gender:</td>
+                <td> Male <input type="radio" name="gen"> 
+                    Fe-Male <input type="radio" name="gen"> Others <input type="radio" name="male"></td>
+                
+             
+            </tr>
+            <tr>
+                <td>
+                    Address:
+                    </td>
+                    <td> <textarea id="name4" placeholder="Enter Your Address" rows="6" cols="25"> </textarea> </td>
+                    <td><label id="num4" style="color:red; visibility:hidden;">** Address Field Cannot be Empty</label></td>
+            </tr>
+            <tr>
+                <td> Country: </td>
+                <td><input type="text" id="name5" placeholder="Enter Your Country"> </td>
+                <td><label id="num5" style="color:red; visibility:hidden;">**Country Field Cannot be Empty</label></td>
+            </tr>
+            <tr>
+                <td> State:</td>
+                <td><input type="text" id="name6" placeholder="Enter Your State"> </td>
+                <td><label id="num6" style="color:red; visibility:hidden;">** State Field Cannot be Empty</label></td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td><input type="text" id="name7" placeholder="Enter Your City"> </td>
+                <td><label id="num7" style="color:red; visibility:hidden;">**City Field Cannot be Empty</label></td>
+            </tr>
+            <tr>
+                <td>Pincode:</td>
+                <td><input type="number" id="name8" placeholder="Enter Your Pincode"> </td>
+                <td><label id="num8" style="color:red; visibility:hidden;">** Pincode Field Cannot be Empty</label></td>
+            </tr>
+            <tr>
+                <td>Post Applying for:</td>
+                <td> <input type="radio" name="one">Registered Nurse<input type="radio" name="one">PCT<input type="radio" name="one">
+                CNA<input type="radio" name="one"> Food Service</td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2">
+                    <input type="submit" value="submit"> &nbsp &nbsp <input type="button" onclick="reset()" value="Reset"></td>
+                
+            </tr>
+           </table></form>
+           <script type="text/javascript">
+               function reset()
+               {
+                document.getElementById("num").style.visibility="hidden";
+              document.getElementById("num1").style.visibility="hidden";
+              document.getElementById("num2").style.visibility="hidden";
+              document.getElementById("num3").style.visibility="hidden";
+              document.getElementById("num4").style.visibility="hidden";
+              document.getElementById("num5").style.visibility="hidden";
+              document.getElementById("num6").style.visibility="hidden";
+              document.getElementById("num7").style.visibility="hidden";
+              document.getElementById("num8").style.visibility="hidden";
+               }
+               function validate(){
+              var q=document.getElementById("name");
+              var q1=document.getElementById("name1");
+              var q2=document.getElementById("name2");
+              var q3=document.getElementById("name3");
+              var q4=document.getElementById("name4");
+              var q5=document.getElementById("name5");
+              var q6=document.getElementById("name6");
+              var q7=document.getElementById("name7");
+              var q8=document.getElementById("name8");
+              document.getElementById("num").style.visibility="hidden";
+              document.getElementById("num1").style.visibility="hidden";
+              document.getElementById("num2").style.visibility="hidden";
+              document.getElementById("num3").style.visibility="hidden";
+              document.getElementById("num4").style.visibility="hidden";
+              document.getElementById("num5").style.visibility="hidden";
+              document.getElementById("num6").style.visibility="hidden";
+              document.getElementById("num7").style.visibility="hidden";
+              document.getElementById("num8").style.visibility="hidden";
+               if(q.value.trim()=="")
+              {
+                  document.getElementById("num").style.visibility="visible";
+                  return false;
+              }
+              if(q1.value.trim()=="")
+              {
+                  document.getElementById("num1").style.visibility="visible";
+                  return false;
+              }
+              if(q2.value.trim()=="")
+              {
+                  document.getElementById("num2").style.visibility="visible";
+                  return false;
+              }
+              if(q3.value.toString().trim()=="")
+              {
+                  document.getElementById("num3").style.visibility="visible";
+                  return false;
+              }
+              if(q4.value.trim()=="")
+              {
+                  document.getElementById("num4").style.visibility="visible";
+                  return false;
+              }
+              if(q5.value.trim()=="")
+              {
+                  document.getElementById("num5").style.visibility="visible";
+                  return false;
+              }
+              if(q6.value.trim()=="")
+              {
+                  document.getElementById("num6").style.visibility="visible";
+                  return false;
+              }
+              if(q7.value.trim()=="")
+              {
+                  document.getElementById("num7").style.visibility="visible";
+                  return false;
+              }
+              if(q8.value.toString().trim()=="")
+              {
+                  document.getElementById("num8").style.visibility="visible";
+                  return false;
+              }
+              regex= /^([a-z A-Z 0-9 \. -]+)@([a-z A-Z 0-9 -]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
+                 if(regex.test(q2.value)==false)
+                 {
+                     document.getElementById("num2").innerHTML="E-Mail Id pattern is wrong";
+                     document.getElementById("num2").style.visibility="visible";
+                        return false;
+                 }
+              var rege= /^[7-9]\d{9}$/;
+                  if(rege.test(q3.value)==false)
+                  {
+                    document.getElementById("num3").innerHTML="Invalid Phone Number";
+                    document.getElementById("num3").style.visibility="visible";
+                     return false;
+                  }
+              return true;
+            }
+           </script>
+        </body>
+    </html>

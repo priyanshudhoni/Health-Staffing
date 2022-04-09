@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+    <head>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+        <title>
+            Registration Form
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" type="text/css" href="second.css">
+       
+    </head>
+    <body>
+        <div class="one">
+            <div class="two">
+   <h1>Registration</h1>
+            </div>
+            <form onsubmit="return validate();" action="greeting.html">
+                <div class="ud">
+                    <div class="ib">
+
+                     <span class="d">
+                         Full Name
+                     </span>
+                     <input id="name" type="text" placeholder="Enter Your Name" >
+            
+                      <label id="n" style="color:red;visibility:hidden;"> Invalid - Name Field Cannot Be Empty</label>
+                    </div>
+                    <div class="ib">
+
+                        <span class="d">
+                            Username
+                        </span>
+                        <input type="text" id="name1" placeholder="Enter Your User-Name" >
+                        <label id="n1" style="color:red;visibility:hidden;">Invalid - Username Field Cannot be Empty</label>
+               
+                        <a href="errorusername.html" style="color: gold;text-decoration:none;visibility:hidden;">Click Here</a>
+                       </div>
+                       <div class="ib">
+
+                        <span class="d">
+                           Phone Number
+                        </span>
+                        <input type="text" id="name2" placeholder="Enter Your Phone Number" >
+                        <label id="n2" style="color:red;visibility:hidden;">Invalid - PhoneNumber Field Cannot be Empty</label>
+   
+                       </div>
+                       <div class="ib">
+
+                        <span class="d">
+                           Email-ID
+                        </span>
+                        <input type="text" id="name3" placeholder="Enter Your EMAIL-ID" >
+                        <label id="n3" style="color:red;visibility:hidden;">Invalid - E-MAIL Field Cannot be Empty</label>
+   
+                       </div>
+                       <div class="ib">
+
+                        <span class="d">
+                            Password
+                        </span>
+                        <input type="password" id="name4" placeholder="Enter Your Password" >
+                        <label id="n4" style="color:red;visibility:hidden;">Invalid - Password Field Cannot be Empty</label>
+                        <a  href="errorpassword.html" style="color: gold;text-decoration:none;visibility:hidden;">Click Here</a>
+   
+                       </div>
+                       <div class="ib">
+
+                        <span class="d">
+                            Confirm Password
+                        </span>
+                        <input type="password" id="name5" placeholder="Confirm Password" >
+                        <label id="n5" style="color:red;visibility:hidden;">Invalid - Confirm Password Field Cannot be Empty</label>
+   
+                       </div>
+                </div>
+                <div class="button">
+                    <button  type="submit">Submit</button>
+                   
+                </div>
+
+            </form>
+        </div>
+        <script type="text/javascript">
+            function validate()
+            {
+              
+                var t=document.getElementById("name");
+                var t1=document.getElementById("name1");
+                var t2=document.getElementById("name2");
+                var t3=document.getElementById("name3");
+                var t4=document.getElementById("name4");
+                var t5=document.getElementById("name5");
+                var rr=document.getElementsByTagName("label");
+                var eee=document.getElementsByTagName("a");
+                eee[0].style.visibility="hidden";
+                eee[1].style.visibility="hidden";
+                for(var i=0;i<rr.length;i++)
+                {
+                    rr[i].style.visibility="hidden";
+                }
+                t=t.value.trim();
+                 if(t==""){
+                    document.getElementById("n").style.visibility="visible";
+                    return false;
+                 }
+                 if(t1.value.trim()=="")
+                 {
+                     document.getElementById("n1").style.visibility="visible";
+                     return false;
+                 }
+                 if(t2.value.trim()=="")
+                 {
+                    document.getElementById("n2").style.visibility="visible";
+                     return false;
+                 }
+                 if(t3.value.trim()=="")
+                 {
+                    document.getElementById("n3").style.visibility="visible";
+                     return false;
+                 }
+                
+                 if(t4.value.trim()=="")
+                 {
+                    document.getElementById("n4").style.visibility="visible";
+                     return false;
+                 }
+                 if(t5.value.trim()=="")
+                 {
+                    document.getElementById("n5").style.visibility="visible";
+                     return false;
+                 }
+                var rege= /^[7-9]\d{9}$/;
+                  if(rege.test(t2.value)==false)
+                  {
+                    document.getElementById("n2").innerHTML="Invalid Phone Number";
+                    document.getElementById("n2").style.visibility="visible";
+                     return false;
+                  }
+                  
+                  if(t4.value!=t5.value)
+                  {
+                    document.getElementById("n5").innerHTML="Password didn't match";
+                    document.getElementById("n5").style.visibility="visible";
+                    return false;
+
+                  }
+                  var regex=/^[A-Z][A-Z a-z]*\d+$/;
+                  if(regex.test(t1.value)==false || t1.value.length<3 || t1.value.length>10)
+                  {
+                    document.getElementById("n1").innerHTML="Username Pattern Incorrect";
+                    document.getElementById("n1").style.visibility="visible";
+                    var t=document.getElementsByTagName("a");
+                   t[0].style.visibility="visible";
+                    return false;
+                  }
+                  regex= /^([a-z A-Z 0-9 \. -]+)@([a-z A-Z 0-9 -]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
+                 if(regex.test(t3.value)==false)
+                 {
+                     document.getElementById("n3").innerHTML="E-Mail Id pattern is wrong";
+                     document.getElementById("n3").style.visibility="visible";
+                        return false;
+                 }
+                 regex=/^\d+$/;
+                 if(regex.test(t4.value)==false || t4.value.length<5 || t4.value.length>15)
+                    {
+                        document.getElementById("n4").innerHTML="Password Pattern Incorrect";
+                    document.getElementById("n4").style.visibility="visible";
+                    var t=document.getElementsByTagName("a");
+                   t[1].style.visibility="visible";
+                    return false;
+                    }
+
+                   return true;
+                  
+                
+       
+            }
+           </script>
+    </body>
+    
+</html>

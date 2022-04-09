@@ -1,0 +1,62 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body
+{
+    background-image:url(image2.jpg);
+    background-size:cover;
+   font-family: sans-serif;
+   animation: slide 7s infinite linear;
+
+}
+@keyframes slide 
+{
+    0%{background-image:url("image2.jpg");}
+    35%{
+         background-image:url("image1.jpg");}
+    
+    75%{
+        background-image:url("image4.jpg");
+    }
+}
+.one
+{
+    background:black;
+    text-align: center;
+  
+   
+}
+.one ul{
+    display:inline-flex;
+    list-style:none;
+    color:#fff;
+}
+.one ul li 
+{
+     width:120px;
+     margin:15px;
+     padding:15px;
+}
+.two
+{
+    font-family:'Fredoka One', cursive;
+    font-size:200%;
+    margin-top:300px;
+    display:grid;
+    place-items:center;
+    text-transform: uppercase;
+
+}
+
+h2
+{
+   
+   margin-left:300px;
+  
+}
+h1{
+   color:Black;
+}
+

@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+        <title>
+            Welcome to Jianmario Health Staffing.
+        </title>
+        <style>
+           
+            *
+            {
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+                font-family:'Fredoka One', cursive;
+            }
+            body 
+            {
+                background-image:url("Logot.png");
+            }
+           
+            .wrapper
+            {
+               
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                min-height:80vh;
+                
+            }
+           
+            .wrapper .static-text 
+            {
+                color:black;
+                font-size:60px;
+                font-weight:400;
+
+            }
+            .wrapper .dynamic
+            {
+                   margin-left:15px;
+            }
+            .dynamic li
+            {
+                color:#FC6D6D;
+                list-style:none;
+                font-size:60px;
+                font-weight:600;
+                
+            }
+            .dynamic li span 
+            {
+                position:relative;
+            }
+            .dynamic li span::after{
+                content:"";
+                position:absolute;
+                height:100%;
+                width:100%;
+                left:0;
+                border-left:2px solid black;
+                background:yellow;
+
+                  animation: typing 1.5s steps(25) infinite;
+            }
+            @keyframes typing {
+                      100%
+                      {
+                          left:100%;
+                          margin:0 -35px 0 35px;
+                      }
+            }
+        </style>
+    </head>
+  
+        <body> 
+          <div class="wrapper">
+              <div class="static-text">Welcome To</div>
+              <ul class="dynamic">
+                  <li><span style="background:yellow;">Gianmario Health Staffing</span></li>
+              </ul>
+          </div>
+       
+          <a href="fifth.html" style="color:black; text-decoration:none;"><h1>Are you an agency seeking health staffing?? Click Here</h1></a><br>
+          <a href="thirdt.html" style="color:black;text-decoration:none;"><h1> Are you seeking health related jobs?? Click Here</h1></a>
+        </body>
+</html>

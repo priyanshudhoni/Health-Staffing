@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="contactcss.css">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+        <title>
+            Contact Us
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    </head>
+    <body>
+        <div id="overlay">
+            <form onsubmit="return validate()"; action="greeting2.html">
+                <h1>Contact US</h1>
+                <label for="one">Name:</label>
+                <input type="text" id="one" placeholder="Your Name">
+                <label id="onee" style="color:red;visibility:hidden;">Name Field Cannot Be Empty</label>
+                <small class="error"></small>
+                <label for="two">Email:</label>
+                <input type="text" id="two" placeholder="Your Email">
+                <label id="twoo" style="color:red; visibility:hidden;">Email Field Cannot Be Empty</label>
+                <small class="error"></small>
+                <label for="three">Message:</label>
+              <textarea id="three" placeholder="Your Message" rows="6"></textarea>
+              <label id="threee" style="color:red;visibility:hidden; ">Message Field Cannot Be Empty</label>
+               
+             <input type="submit" style="color:red;background:orange;" value="submit">
+                
+            </form>
+        </div>
+        <script type="text/javascript">
+            function validate()
+            { 
+                document.getElementById("onee").style.visibility="hidden";
+                document.getElementById("twoo").style.visibility="hidden";
+                document.getElementById("threee").style.visibility="hidden";
+
+                      var nam=document.getElementById("one");
+                      var nam1=document.getElementById("two");
+                      var nam2=document.getElementById("three");
+                      if(nam.value.trim()=="")
+                      {
+                          document.getElementById("onee").style.visibility="visible";
+                           return false;
+                      }
+                        if(nam1.value.trim()=="")
+                        {
+                            document.getElementById("twoo").style.visibility="visible";
+                            return false;
+                        }
+                        if(nam2.value.trim()=="")
+                        {
+                            
+                            document.getElementById("threee").style.visibility="visible";
+                            return false;
+                        }
+                        regex= /^([a-z A-Z 0-9 \. -]+)@([a-z A-Z 0-9 -]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
+                        if(regex.test(nam1.value)==false)
+                 {
+                     document.getElementById("twoo").innerHTML="E-Mail Id pattern is wrong";
+                     document.getElementById("twoo").style.visibility="visible";
+                        return false;
+                 }
+                        return true;
+                      
+
+            }
+        </script>
+    </body>
+      
+   
+</html>

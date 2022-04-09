@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+        <title>
+            Login Form
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="third.css">
+
+    </head>
+    <body>
+        <div class="c">
+             <h1>Login</h1>
+            <form onsubmit="return validate()" method="" action="Welcome.html">
+               <div class="f">
+                
+                   <input type="text" placeholder="Username" id="first" >
+                  
+                   
+
+               </div> 
+               <label id="one" style="color:red;visibility:hidden"> Username cannot be empty </label>
+                 
+               <div class="f">
+              
+                   <input type="password" placeholder="Password" id="first1" >
+                  
+                 <span></span>
+
+               </div> 
+               <label id="two" style="color:red;visibility:hidden"> Password cannot be empty </label>
+               <div class="password">Forgot Password?</div>
+                <input type="submit" value="login">
+                <div class="sign">
+                    Not a member? <a href="firsth.html">Sign-Up</a>
+                </div>
+
+           
+
+
+            </form>
+        </div>
+        <script type="text/javascript">
+            function validate(){
+            var nam=document.getElementById("first");
+            var nam1=document.getElementById("first1");
+            document.getElementById("one").style.visibility="hidden";
+            document.getElementById("two").style.visibility="hidden";
+            if(nam.value.trim()=="")
+            {
+                document.getElementById("one").style.visibility="visible";return false;
+           }
+           if(nam1.value.trim()=="")
+           {
+           
+            document.getElementById("two").style.visibility="visible";return false;
+           }
+           return true;
+            }
+        </script>
+    </body>
+</html>
